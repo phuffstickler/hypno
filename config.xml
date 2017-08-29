@@ -10,7 +10,7 @@
   <author href="http://honemedia.com//hypno" email="phil@honemedia.com">Hone Media, LLC</author>
 
   <!-- 
-  <gap:plugin name="com.adobe.plugins.gaplugin" /> -->
+  <gap:plugin name="com.adobe.plugins.gaplugin" /> 
   <gap:plugin name="com.phonegap.plugin.statusbar" />
   <gap:plugin name="org.apache.cordova.splashscreen" />
   <gap:plugin name="nl.x-services.plugins.socialsharing" />
@@ -20,6 +20,7 @@
   <gap:plugin name="org.apache.cordova.camera" />
   <gap:plugin name="org.apache.cordova.file" />
   <gap:plugin name="org.apache.cordova.file-transfer" />
+-->
 
 
 <!--   <preference name="android-minSdkVersion" value="7" /> -->
