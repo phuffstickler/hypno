@@ -1,0 +1,2 @@
+# hypno
+Hypnotize your friends
