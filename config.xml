@@ -9,7 +9,8 @@
 
   <author href="http://honemedia.com//hypno" email="phil@honemedia.com">Hone Media, LLC</author>
 
-  <gap:plugin name="com.adobe.plugins.gaplugin" />
+  <!-- 
+  <gap:plugin name="com.adobe.plugins.gaplugin" /> -->
   <gap:plugin name="com.phonegap.plugin.statusbar" />
   <gap:plugin name="org.apache.cordova.splashscreen" />
   <gap:plugin name="nl.x-services.plugins.socialsharing" />
