@@ -35,189 +35,50 @@
 	
 	
 	<style type="text/css">
-	body{
-overflow: hidden;
-}
-
-#spin_container{
-width:100%;
-height:auto;
-border-radius:350px;
-
-position:relative;
-margin:0 auto;
-display:block;
-
-/* background:#fff;
--webkit-box-shadow:0 0 120px #000; */
-}
-
-
-#spin{
-width:600px; height:600px;
--webkit-border-radius:300px;
-top:50px; left:50px;
-
-background:#333;
-position:relative;
-text-indent:-9999px;
-}
-
-#spin div{
-position:absolute;
-}
-#spin1{
-width:500px; height:500px;
--webkit-border-radius:250px;
-background:#fff;
-}
-
-#spin2{
-width:500px; height:500px;
--webkit-border-radius:250px;
-top:1px; left:50px;
-background:#fff;
-}
-
-#spin3{
-width:500px; height:500px;
--webkit-border-radius:250px;
-top:20px; left:10px;
-background:#fff;
-}
-
-#spin4{
-width:500px; height:500px;
--webkit-border-radius:250px;
-top:20px; left:-60px;
-background:#333;
-}
-
-#spin5{
-width:420px; height:420px;
--webkit-border-radius:210px;
-top:64px; left:107px;
-background:#fff;
-}
-
-#spin6{
-width:420px; height:420px;
--webkit-border-radius:210px;
-top:-10px; left:-15px;
-background:#fff;
-}
-
-#spin7{
-width:350px; height:350px;
--webkit-border-radius:175px;
-top:-5px; left:55px;
-background:#333;
-}
-
-#spin8{
-width:300px; height:300px;
--webkit-border-radius:150px;
-top:8px; left:-20px;
-background:#fff;
-}
-
-#spin9{
-width:280px; height:280px;
--webkit-border-radius:140px;
-top:45px; left:25px;
-background:#333;
-}
-
-#spin10{
-width:240px; height:240px;
--webkit-border-radius:120px;
-top:-10px; left:39px;
-background:#fff;
-}
-
-#spin11{
-width:180px; height:180px;
--webkit-border-radius:100px;
-top:13px; left:-5px;
-background:#333;
-}
-
-#spin12{
-width:150px; height:150px;
--webkit-border-radius:90px;
-top:43px; left:6px;
-background:#fff;
-}
-
-#spin13{
-width:140px; height:140px;
--webkit-border-radius:70px;
-top:-10px; left:30px;
-background:#333;
-}
-
-#spin14{
-width:140px; height:140px;
--webkit-border-radius:70px;
-top:5px; left:-8px;
-background:#fff;
-}
-
-#spin15{
-width:160px; height:160px;
--webkit-border-radius:80px;
-top:-5px; left:-17px;
-background:#fff;
-}
-
-#spin16{
-width:140px; height:140px; background:#333;
--webkit-border-radius:70px;
-position:absolute; top:-4px; left:27px;
-}
-
-#spin17{
-width:140px; height:140px;
--webkit-border-radius:70px;
-top:3px; left:-10px;
-background:#fff;
-}
-#spin18{
-width:130px; height:130px;
--webkit-border-radius:65px;
-top:7px; left:15px;
-background:#333;
-}
-#spin19{
-width:120px; height:120px;
--webkit-border-radius:60px;
-top:-5px; left:0;
-background:#fff;
-}
-#spin20{
-width:100px; height:100px;
--webkit-border-radius:50px;
-top:19px; left:0px;
-background:#fff;
-}
-
-
-#spin{
+	canvas{
+	position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-960px;
+  margin-top:-960px;
 -webkit-animation-name: spin;
--webkit-animation-iteration-count: infinite;
--webkit-animation-timing-function: linear;
--webkit-animation-duration: 2s;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 500ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-
-/* @-webkit-keyframes spin {
-from {
--webkit-transform: rotate(0deg);
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
 }
-
-to {
--webkit-transform: rotate(-360deg);
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
 }
-} */
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 </style>
 	
 
@@ -240,77 +101,51 @@ to {
 -->
 
 	
-<script type="text/javascript">
-function refreshApp(){
-	//location.reload();
-}
-</script>
-	
 
 </head>
 
-<body id="body">
-
-<div id="spin_container">
-  <div id="spin">
-    <div id="spin1">
-      <div id="spin2">
-        <div id="spin3">
-          <div id="spin4">
-            <div id="spin5">
-              <div id="spin6">
-                <div id="spin7">
-                  <div id="spin8">
-                    <div id="spin9">
-                      <div id="spin10">
-                        <div id="spin11">
-                          <div id="spin12">
-                            <div id="spin13">
-                              <div id="spin14">
-                                <div id="spin15">
-                                  <div id="spin16">
-                                    <div id="spin17">
-                                      <div id="spin18">
-                                        <div id="spin19">
-                                          <div id="spin20">
-                                            Hypnotize me
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!--
-<script type="text/javascript" src="http://www.racevendors.com/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="http://www.racevendors.com/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="http://www.racevendors.com/js/engine.js"></script>
--->
-
-<!-- THIS BELOW IS NEEDED ONLY FOR NATIVE APP . DO NOT INCLUDE WITH WEBSITE -->
-<!--<script type="text/javascript" src="http://www.racevendors.com/js/WebViewColor.js"></script>-->
+<body>
 
 <!--<script id="cordova" type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" src="GAPlugin.js"></script>
 <script type="text/javascript" src="PushNotification.js"></script>-->
 
+	<script>
+		var canvas = document.createElement('canvas');
+var width = canvas.width = 1920;
+var height = canvas.height = 1920;
+var centerX = width/2;
+var centerY = height/2;
+var radius = 5;
+var size = 2000;
+var degree = 10;
+var step = degree/size;
+
+document.body.appendChild(canvas);
+
+var c = canvas.getContext('2d');
+
+c.fillStyle = '#fff';
+c.fillRect(0,0,width,height);
+
+c.beginPath();
+c.moveTo(centerX+(i/2), centerY);
+for(var i = 0; i < size; i++)
+{
+  if(degree > 0)
+  {
+    degree -= step;
+  }
+  c.translate(centerX, centerY);
+  c.rotate(-degree * (Math.PI / 180));
+  c.translate(-centerX, -centerY);
+  c.lineTo(centerX+(i/2), centerY); 
+  
+}
+  c.lineWidth = 8;
+  c.strokeStyle="#000";
+  c.stroke();
+	</script>
 
 
 </body>
