@@ -32,54 +32,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	
 <style type="text/css">
-body{
-	overflow: hidden;
+.test{
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMDAgMzAwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDAgMzAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTE2MC40LDE1NC42YzAtNS45LTQuOC0xMC43LTEwLjctMTAuN3MtMTAuNyw0LjgtMTAuNywxMC43YzAsMTEuOCw5LjYsMjEuNCwyMS40LDIxLjRzMjEuNC05LjYsMjEuNC0yMS40CgljMC0xNy44LTE0LjQtMzIuMi0zMi4yLTMyLjJzLTMyLjIsMTQuNC0zMi4yLDMyLjJjMCwyMy43LDE5LjIsNDIuOSw0Mi45LDQyLjlzNDIuOS0xOS4yLDQyLjktNDIuOWMwLTI5LjYtMjQtNTMuNi01My42LTUzLjYKCXMtNTMuNiwyNC01My42LDUzLjZjMCwzNS41LDI4LjgsNjQuMyw2NC4zLDY0LjNzNjQuMy0yOC44LDY0LjMtNjQuM2MwLTQxLjUtMzMuNi03NS03NS03NXMtNzUsMzMuNi03NSw3NQoJYzAsNDcuNCwzOC40LDg1LjcsODUuNyw4NS43czg1LjctMzguNCw4NS43LTg1LjdjMC01My4zLTQzLjEtOTYuNS05Ni41LTk2LjVzLTk2LjUsNDMuMS05Ni41LDk2LjVjMCw1OS4yLDQ3LjksMTA3LjIsMTA3LjIsMTA3LjIKCXMxMDcuMi00Ny45LDEwNy4yLTEwNy4yYzAtNjUuMi01Mi43LTExNy45LTExNy45LTExNy45UzMxLjgsODkuNSwzMS44LDE1NC42YzAsNzEuMSw1Ny41LDEyOC42LDEyOC42LDEyOC42UzI4OSwyMjUuNywyODksMTU0LjYKCWMwLTc3LTYyLjMtMTM5LjMtMTM5LjMtMTM5LjNTMTAuMyw3Ny42LDEwLjMsMTU0LjYiLz4KPC9zdmc+Cg==') no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  overflow: hidden;
+  
+/*   border:1px solid red; */
 }
-	
-canvas{
-	position:absolute;
-	top:50%;
-	left:50%;
-	margin-left:-960px;
-	margin-top:-960px;
-	-webkit-animation-name: spin;
-	-webkit-animation-duration: 500ms;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	-moz-animation-name: spin;
-	-moz-animation-duration: 500ms;
-	-moz-animation-iteration-count: infinite;
-	-moz-animation-timing-function: linear;
-	-ms-animation-name: spin;
-	-ms-animation-duration: 500ms;
-	-ms-animation-iteration-count: infinite;
-	-ms-animation-timing-function: linear;
 
-	animation-name: spin;
-	animation-duration: 500ms;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+
+body{
+  overflow: hidden;
+  margin: 0;
 }
-	
+button{
+  position: absolute; 
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+canvas{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left: -960px;
+  margin-top: -960px;
+  /* -ms-, -moz-, -webkit- */
+/*   animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+}
 @-ms-keyframes spin {
-	from { -ms-transform: rotate(0deg); }
-	to { -ms-transform: rotate(360deg); }
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
 }
 @-moz-keyframes spin {
-	from { -moz-transform: rotate(0deg); }
-	to { -moz-transform: rotate(360deg); }
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
 }
 @-webkit-keyframes spin {
-	from { -webkit-transform: rotate(0deg); }
-	to { -webkit-transform: rotate(360deg); }
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
 }
 @keyframes spin {
-	from {
-	transform:rotate(0deg);
-	}
-	to {
-	transform:rotate(360deg);
-	}
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
 }
 </style>
 	
@@ -108,45 +118,6 @@ canvas{
 
 <body>
 
-<!--<script id="cordova" type="text/javascript" charset="utf-8" src="cordova.js"></script>
-<script type="text/javascript" src="GAPlugin.js"></script>
-<script type="text/javascript" src="PushNotification.js"></script>-->
-
-<script>
-var canvas = document.createElement('canvas');
-var width = canvas.width = 1920;
-var height = canvas.height = 1920;
-var centerX = width/2;
-var centerY = height/2;
-var radius = 5;
-var size = 2000;
-var degree = 10;
-var step = degree/size;
-
-document.body.appendChild(canvas);
-
-var c = canvas.getContext('2d');
-
-c.fillStyle = '#fff';
-c.fillRect(0,0,width,height);
-
-c.beginPath();
-c.moveTo(centerX+(i/2), centerY);
-for(var i = 0; i < size; i++)
-{
-  if(degree > 0)
-  {
-    degree -= step;
-  }
-  c.translate(centerX, centerY);
-  c.rotate(-degree * (Math.PI / 180));
-  c.translate(-centerX, -centerY);
-  c.lineTo(centerX+(i/2), centerY); 
-}
-c.lineWidth = 8;
-c.strokeStyle="#000";
-c.stroke();
-</script>
-
-</body>
+<div class="test"></div>
+	
 </html>
