@@ -46,8 +46,12 @@ body{
   left: -50%;
   width: 200vw;
   height: 300vh;
-  background: url('spiral.png') no-repeat center center;
-  animation: spin 2s infinite linear;
+  background: url('https://raw.githubusercontent.com/phuffstickler/hypno/master/spiral.png') no-repeat center center;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+/*   animation-direction: reverse;  */
 }
 </style>
 	
@@ -71,7 +75,15 @@ body{
 </head>
 
 <body>
-	<div class="hypnosis"></div>
+	<div onclick="javascript:toggleHypnosis()" class="hypnosis"></div>
+	
+	<script>
+		var hypnosis = document.querySelector(".hypnosis");
+		function toggleHypnosis(){
+		  hypnosis.style.animationPlayState = hypnosis.style.animationPlayState === "paused" ? "running" : "paused";
+		}
+	</script>
+
 </body>
 	
 </html>
